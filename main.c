@@ -305,7 +305,7 @@ int main(void)
                                 #endif
                                 
                                 #ifdef CAPACITIVE_H_
-                                return capacitance
+                                // return capacitance
                                 if ( daddr == 0x0005 )
                                 {
                                     // requested amount
