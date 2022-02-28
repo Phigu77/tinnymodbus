@@ -305,23 +305,7 @@ int main(void)
                                 #endif
                                 
                                 #ifdef CAPACITIVE_H_
-                                // return capacitance
-                                // if ( daddr == 0x0005 )
-                                // {
-                                //     // requested amount
-                                //     if ( modbus[5] != 0x01 ) break;
-
-                                //     sendbuff[2] = 0x02; // mslen
-
-                                //     // reads
-                                //     uint16_t capacitance = get_capacitance_avg( 4 );
-
-                                //     // store Vcc
-                                //     sendbuff[3] = ((uint8_t*)(&capacitance))[1];
-                                //     sendbuff[4] = ((uint8_t*)(&capacitance))[0];
-
-                                //     send_modbus_array( &sendbuff[0], 7 );
-                                // }
+                                return capacitance
                                 if ( daddr == 0x0005 )
                                 {
                                     // requested amount
@@ -333,8 +317,8 @@ int main(void)
                                     uint16_t capacitance = get_capacitance_avg( 4 );
 
                                     // store Vcc
-                                    sendbuff[3] = 0x12;
-                                    sendbuff[4] = 0x13;
+                                    sendbuff[3] = ((uint8_t*)(&capacitance))[1];
+                                    sendbuff[4] = ((uint8_t*)(&capacitance))[0];
 
                                     send_modbus_array( &sendbuff[0], 7 );
                                 }
