@@ -262,6 +262,7 @@ int main(void)
                                     send_modbus_array( &sendbuff[0], 7 );
                                 }
                                 #ifdef ATSENS_H
+                                
                                 // return internal VCC
                                 if ( daddr == 0x0003 )
                                 {
@@ -281,7 +282,7 @@ int main(void)
 
                                     send_modbus_array( &sendbuff[0], 9 );
                                 }
-
+                                
                                 // return internal TMP
                                 if ( daddr == 0x0004 )
                                 {
@@ -302,12 +303,13 @@ int main(void)
                                     send_modbus_array( &sendbuff[0], 9 );
                                 }
                                 #endif
+                                
                                 #ifdef CAPACITIVE_H_
                                 // return capacitance
                                 if ( daddr == 0x0005 )
                                 {
                                     // requested amount
-                                    if ( modbus[5] != 0x02 ) break;
+                                    if ( modbus[5] != 0x01 ) break;
 
                                     sendbuff[2] = 0x02; // mslen
 

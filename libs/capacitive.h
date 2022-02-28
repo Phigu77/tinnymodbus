@@ -13,8 +13,8 @@
 #define CAP_PORT_DIR	DDRB
 #define CAP_PORT_PIN	PINB
 #define CAP_PORT		PORTB
-#define CAP_OUT_PIN		PINB2
-#define CAP_IN_PIN		PINB4
+#define CAP_OUT_PIN		PB2
+#define CAP_IN_PIN		PB4
 
 #define MAX_TIMER1_OVF 1000
 // Capacitance between IN_PIN and Ground
