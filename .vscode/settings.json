@@ -1,0 +1,6 @@
+{
+    "AVR.source.compiler": "c:\\Program Files (x86)\\Atmel\\Studio\\7.0\\toolchain\\avr8\\avr8-gnu-toolchain\\bin\\avr-gcc.exe",
+    "AVR.programmer.tool": "c:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\bin\\avrdude.exe",
+    "AVR.programmer.definitions": "c:\\Program Files (x86)\\Arduino\\hardware\\tools\\avr\\etc\\avrdude.conf",
+    "AVR.source.libraries": []
+}
