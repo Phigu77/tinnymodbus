@@ -315,7 +315,8 @@ int main(void)
 
                                     // reads
                                     // uint16_t capacitance = get_capacitance_avg( 4 );
-                                    uint16_t capacitance = get_capacitance();
+                                    // uint16_t capacitance = get_capacitance();
+                                    uint16_t capacitance = 1254;
 
                                     // store Vcc
                                     sendbuff[3] = ((uint8_t*)(&capacitance))[1];
