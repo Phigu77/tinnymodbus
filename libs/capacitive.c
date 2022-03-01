@@ -60,7 +60,7 @@ uint16_t get_capacitance(void)
 		timer1_ovf_count = 0;								// Clear timer value
 		
 		TIMSK = (1<<TOIE1);									// enable interrupt on overflow 
-		sei();												// enable global interrupts
+		//sei();												// enable global interrupts
 
 		ADMUX =  (1<<MUX0);									// AD-MUX on CAP_OUT_PIN
 
@@ -108,7 +108,8 @@ uint16_t get_capacitance_avg(uint8_t n_measures)
 	return sum_capacitance / n_measures;
 }
 
-ISR (TIMER1_OVF_vect)
+//ISR (TIMER1_OVF_vect)
+ISR (4)
 {
   /* Interrupt all 128us */
 	timer1_ovf_count += 1;

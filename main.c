@@ -314,7 +314,8 @@ int main(void)
                                     sendbuff[2] = 0x02; // mslen
 
                                     // reads
-                                    uint16_t capacitance = get_capacitance_avg( 4 );
+                                    // uint16_t capacitance = get_capacitance_avg( 4 );
+                                    uint16_t capacitance = get_capacitance();
 
                                     // store Vcc
                                     sendbuff[3] = ((uint8_t*)(&capacitance))[1];
