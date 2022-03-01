@@ -108,8 +108,7 @@ uint16_t get_capacitance_avg(uint8_t n_measures)
 	return sum_capacitance / n_measures;
 }
 
-//ISR (TIMER1_OVF_vect)
-ISR (4)
+ISR (TIMER1_OVF_vect)
 {
   /* Interrupt all 128us */
 	timer1_ovf_count += 1;
